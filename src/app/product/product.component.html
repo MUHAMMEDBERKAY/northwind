@@ -1,0 +1,18 @@
+<h4 class="page-header">Products</h4>
+<!-- <div *ngIf="addedProduct"  class="alert alert-success" >
+{{addedProduct}} added to cart
+</div> -->
+
+<div >
+  <ul class="list-group"> 
+    <li *ngFor="let product of products" class="list-group-item">
+      <button (click)="addToCart(product)" class="bnt bnt-xs bnt-primary pull-right">
+          <i class="glyphicon glyphicon-plus" ></i>
+      add to app-cart
+  </button>
+       <h5>{{product.productName}} </h5>  
+       <p> {{product.quantityPerUnit}}</p> 
+       <h6> {{product.unitPrice}}</h6>
+    </li>
+  </ul>
+</div>
